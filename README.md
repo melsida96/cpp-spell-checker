@@ -50,6 +50,8 @@ Run the application from the Windows terminal:
 
 ## Tests
 
+Run the tests from the Windows terminal:
+
 ```powershell
 ctest --test-dir build -C Debug --output-on-failure
 .\build\Debug\SpellCheckerTests.exe
