@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <utility>
 
 namespace
 {
@@ -63,7 +64,7 @@ namespace
             PrintCorrectedWord(word, checker);
         }
 
-        std::cout << std::endl;;
+        std::cout << std::endl;
     }
 
 }
@@ -77,7 +78,8 @@ int main()
     // Read dictionary
     while (std::getline(std::cin, line))
     {
-        if (line == "===") {
+        if (line == "===")
+        {
             foundSeparator = true;
             break;
         }

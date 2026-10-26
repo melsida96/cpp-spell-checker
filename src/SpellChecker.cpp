@@ -1,5 +1,7 @@
 #include "SpellChecker.h"
 
+#include <utility>
+
 namespace SpellChecker
 {
     namespace
@@ -71,7 +73,8 @@ namespace SpellChecker
             return false;
         }
 
-        int EditCost(std::string_view a, std::string_view b) {
+        int EditCost(std::string_view a, std::string_view b)
+        {
             if (a == b)
                 return 0;
 

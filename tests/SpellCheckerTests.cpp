@@ -4,14 +4,16 @@
 #include <string_view>
 #include <vector>
 
-int main() {
+int main()
+{
     int passed = 0;
     int failed = 0;
 
-    auto check = [&](std::string_view name, bool condition) {
-        if (condition) {
+    auto check = [&](std::string_view name, bool condition)
+     {
+        if (condition)
             ++passed;
-        } else {
+        else {
             ++failed;
             std::cerr << "FAIL: " << name << '\n';
         }
@@ -25,7 +27,8 @@ int main() {
         const bool equal = (actual == expected);
         check(name, equal);
 
-        if (!equal) {
+        if (!equal)
+        {
             std::cerr << "  Input:    " << input << "\n  Expected:";
             for (auto word : expected) std::cerr << ' ' << word;
             std::cerr << "\n  Actual:  ";
